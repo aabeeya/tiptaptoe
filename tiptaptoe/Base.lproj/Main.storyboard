@@ -82,9 +82,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fhT-oE-fyL" appends="YES" id="KzE-Yf-Jwg"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="qRj-n6-w0o">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="p7e-yp-Brs">
@@ -101,11 +98,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fhT-oE-fyL">
-                    <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="YD6-ju-NgG"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="537" y="152"/>
         </scene>
