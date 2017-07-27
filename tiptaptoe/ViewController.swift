@@ -15,10 +15,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
 
+    var formatter: NumberFormatter;
+
+    required init?(coder aDecoder: NSCoder) {
+        formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.locale = NSLocale.current
+
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         billField.becomeFirstResponder()
+        tipLabel.text = formatNumber(0)
+        totalLabel.text = formatNumber(0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,8 +72,12 @@ class ViewController: UIViewController {
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
 
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = formatNumber(tip)
+        totalLabel.text = formatNumber(total)
+    }
+
+    func formatNumber(_ amount: Double)-> String {
+        return formatter.string(from: NSDecimalNumber(value: amount))!
     }
 }
 
