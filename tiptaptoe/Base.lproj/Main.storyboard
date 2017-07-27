@@ -87,7 +87,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="qRj-n6-w0o">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="p7e-yp-Brs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="p7e-yp-Brs">
+                            <connections>
+                                <segue destination="3dP-vO-h2O" kind="push" id="cVw-Je-yjg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="Djf-hc-jUX" id="v50-PA-z2M"/>
@@ -104,6 +108,52 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="537" y="152"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="jC6-qt-JeD">
+            <objects>
+                <viewController id="3dP-vO-h2O" customClass="SettingsViewController" customModule="tiptaptoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5uj-lS-d4c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How much do you usually tip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Azu-KG-nyi">
+                                <rect key="frame" x="46" y="113" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="plM-wC-nzS">
+                                <rect key="frame" x="33" y="161" width="255" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="DU4-L5-0PG"/>
+                                    <action selector="setTipIndex:" destination="3dP-vO-h2O" eventType="valueChanged" id="WYw-L2-POz"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="N7u-7B-p17">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="gtp-VY-INI">
+                            <connections>
+                                <action selector="backClicked:" destination="3dP-vO-h2O" id="8Nm-Mg-POL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tipControl" destination="plM-wC-nzS" id="ru1-tV-4dj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTu-GX-5zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y0x-9n-kdI">

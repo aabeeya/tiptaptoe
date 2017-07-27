@@ -14,6 +14,7 @@
 		9C40F2C11F299C1200A0EBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C40F2BF1F299C1200A0EBBC /* LaunchScreen.storyboard */; };
 		9C40F2CC1F299C1200A0EBBC /* tiptaptoeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C40F2CB1F299C1200A0EBBC /* tiptaptoeTests.swift */; };
 		9C40F2D71F299C1200A0EBBC /* tiptaptoeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C40F2D61F299C1200A0EBBC /* tiptaptoeUITests.swift */; };
+		9C40F2E51F29B23400A0EBBC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C40F2E41F29B23400A0EBBC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9C40F2D21F299C1200A0EBBC /* tiptaptoeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiptaptoeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C40F2D61F299C1200A0EBBC /* tiptaptoeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiptaptoeUITests.swift; sourceTree = "<group>"; };
 		9C40F2D81F299C1200A0EBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C40F2E41F29B23400A0EBBC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				9C40F2B61F299C1200A0EBBC /* AppDelegate.swift */,
 				9C40F2B81F299C1200A0EBBC /* ViewController.swift */,
 				9C40F2BA1F299C1200A0EBBC /* Main.storyboard */,
+				9C40F2E41F29B23400A0EBBC /* SettingsViewController.swift */,
 				9C40F2BD1F299C1200A0EBBC /* Assets.xcassets */,
 				9C40F2BF1F299C1200A0EBBC /* LaunchScreen.storyboard */,
 				9C40F2C21F299C1200A0EBBC /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				9C40F2B91F299C1200A0EBBC /* ViewController.swift in Sources */,
 				9C40F2B71F299C1200A0EBBC /* AppDelegate.swift in Sources */,
+				9C40F2E51F29B23400A0EBBC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

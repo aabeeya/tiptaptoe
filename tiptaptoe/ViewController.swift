@@ -20,6 +20,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        // Check to see if there's already a default
+        // Perform this on viewWillAppear instead of
+        // viewDidLoad to force the tipControl to reflect
+        // whatever the user selects in Settings,
+        // returning from which doesn't call viewDidLoad
+        // but does call viewDidAppear
+        // #lifecycle
+
+        let originalTipIndex = tipControl.selectedSegmentIndex
+
+        let userDefaults = UserDefaults.standard
+        let tipIndex = userDefaults.integer(forKey: "tipIndex")
+
+        if (tipIndex != originalTipIndex) {
+            tipControl.selectedSegmentIndex = tipIndex
+            calculateTip({});
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
