@@ -31,6 +31,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Didn't quite make sense to have the bill amount _always_ be the first responder and save the amount in UserDefaults because it would always get overridden. Skipped that functionality.
 
+Added functionality to split bill across people.
+
 ## License
 
     Copyright 2017 Aabeeya Salman

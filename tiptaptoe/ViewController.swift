@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var numPeopleField: UITextField!
+    @IBOutlet weak var totalPerPersonLabel: UILabel!
 
     var formatter: NumberFormatter;
 
@@ -72,8 +74,17 @@ class ViewController: UIViewController {
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
 
+        var peopleSplit = Double(numPeopleField.text!) ?? 1
+        if peopleSplit == 0
+        {
+            peopleSplit = 1
+        }
+        let totalSplit = total/peopleSplit
+
+
         tipLabel.text = formatNumber(tip)
         totalLabel.text = formatNumber(total)
+        totalPerPersonLabel.text = formatNumber(totalSplit)
     }
 
     func formatNumber(_ amount: Double)-> String {
